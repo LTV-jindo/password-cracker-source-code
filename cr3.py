@@ -4,7 +4,7 @@ import time
 
 #This is basically a list of all the different characters that will be tried.
 #You will notice many symbols missing as they were slowing down efficiency and very unlikely to appear.
-Alphabet = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.@#")
+Alphabet = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.!@#$%^&*-_=+;:,.<>?")
 
 #This allows the user to decide what password the program will "crack" so they can decide the difficulty
 #And also so they are able to see the results a lot more reliably
@@ -19,9 +19,9 @@ counter = 1
 #This starts off the number of characters as 1.
 CharLength = 1
 
-#This stops the program once it gets to 25 characters (most people would run out of patience WAY before that)
+#This stops the program once it gets to 30 characters (most people would run out of patience WAY before that)
 #But if you feel the need you can increase the number.
-for CharLength in range(25):
+for CharLength in range(30):
 
     #This finds all of the possible combinations of characters that are of the correct length.
     passwords = (itertools.product(Alphabet, repeat = CharLength))
